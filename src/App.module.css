@@ -1,0 +1,55 @@
+.App {
+  height: 250vh;
+  display: grid;
+  grid-template-rows: 1fr 24fr 2fr;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+.nav > span {
+  margin: 0px 5px;
+  color: plum;
+  font-weight: 800;
+}
+
+.main {
+  background-color: gainsboro;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.introduction {
+  border: 1px solid black;
+  background-image: url(https://i.pinimg.com/564x/4d/69/a4/4d69a416767fe5a8f8ce6f7a5c6e0d85.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.introduction > div {
+  margin-left: 40px;
+  color: plum
+}
+
+.skills {
+  border: 1px solid black;
+}
+
+.myWork {
+  border: 1px solid black;
+}
+
+.contact {
+  border: 1px solid black
+}
+
+.footer {
+  background-color: gray;
+}
