@@ -121,6 +121,10 @@
   text-align: center;
 }
 
+.skillsGrid > div > img {
+  height: 40px;
+}
+
 .myWork {
   display: grid;
   grid-template-rows: 1fr 9fr;
@@ -134,16 +138,39 @@
 }
 
 .skillsWork {
-  padding: 110px 300px;
+  padding: 20px 300px;
   display: grid;
   gap: 5px;
   grid-template-columns: 1fr 1fr;
 }
 
 .skillsWork > div {
+  height:200px;
+  width: 400px;
   border: 1px solid #b0a5e9;
   border-radius: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsWork > div:hover {
+  cursor: pointer;
+  color: #020027;
+  background-image: radial-gradient();
+
+}
+
+.skillsWork > div:first-child {
+  background-image: url('./Henry-food.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.skillsWork > div:last-child {
+  background-image: url('./Novelty-books.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contact {
