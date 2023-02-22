@@ -13,9 +13,9 @@ function App() {
       </nav>
       <main className={styles.main}>
         <div className={styles.introduction}>
-            <div>
-                <h1>I am Jaider Cueto</h1>
-                <h3>I am a Full Stack developer</h3>
+            <div className={styles.typewriter}>
+                <h1>Hi, I am Jaider Cueto.</h1>
+                <h3><span>I am a Full-Stack developer.</span></h3>
             </div>
         </div>
         <div className={styles.about}>
