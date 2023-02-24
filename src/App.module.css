@@ -1,13 +1,11 @@
-.App {
-  height: 280vh;
-}
+/* Navigation Bar */
 
 .nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: #020027;
-  height: 10vh;
+  height: 60px;
 }
 
 .nav > span {
@@ -16,22 +14,18 @@
   font-weight: 800;
 }
 
+/* Main Section */
+
 .main {
-  background-color: gainsboro;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  height: 250vh;
-  width: 100vw;
+  height: fit-content;
 }
 
 .introduction {
-  background-image: url('./banner-portfolio.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url('./banner-portfolio.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 300px;
 }
 
 .typewriter > h1 {
@@ -54,13 +48,11 @@
   overflow: hidden;
 }
 
-/* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: plum; }
@@ -69,12 +61,12 @@
 .about {
   display: grid;
   grid-template-rows: 1fr 9fr;
-  height: 70vh;
+  height: fit-content;
   background-color: #020027;
   color: #b0a5e9
 }
 
-.about > h2 {
+.about > h2, .skills > h2, .myWork > h2 {
   margin: 0px auto;
 }
 
@@ -91,21 +83,18 @@
 
 .about > div > img {
     margin: auto 0px;
-    height: 60vh;
+    height: 90%;
     border-radius: 10px;
 }
 
 .skills {
   display: grid;
   grid-template-rows: 1fr 9fr;
-  height: 50vh;
+  height: 350px;
   background-color: #020027;
   color: #b0a5e9
 }
 
-.skills > h2 {
-  margin: 0px auto;
-}
 
 .skillsGrid {
   padding: 20px 300px;
@@ -125,23 +114,28 @@
   height: 40px;
 }
 
+.htmlcss {
+  height: fit-content;
+}
+
+.htmlcss > img {
+  height: 50px;
+}
+
 .myWork {
   display: grid;
   grid-template-rows: 1fr 9fr;
-  height: 50vh;
+  height: 500px;
   background-color: #020027;
   color: #b0a5e9
 }
 
-.myWork > h2 {
-  margin: 0px auto;
-}
 
 .skillsWork {
   padding: 20px 300px;
   display: grid;
   gap: 5px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .skillsWork > div {
@@ -152,32 +146,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .skillsWork > div:hover {
   cursor: pointer;
   color: #020027;
-  background-image: radial-gradient();
-
 }
 
 .skillsWork > div:first-child {
   background-image: url('./Henry-food.png');
-  background-size:cover;
-  background-repeat: no-repeat;
 }
 
 .skillsWork > div:last-child {
   background-image: url('./Novelty-books.png');
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .contact {
-  border: 1px solid black;
   display: grid;
-  grid-template-rows: 1fr 5fr;
-  height: 50vh;
+  grid-template-rows: 1fr 1fr;
+  height: 200px;
   background-color: #020027;
   color: #b0a5e9
 }
@@ -190,10 +179,14 @@
   padding: 0 500px;
   display: grid;
   gap: 5px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-.skillsContact > i {
+.skillsContact > a {
+  text-decoration: none;
+}
+
+.skillsContact > a > i {
   display: flex;
   padding: 5px;
   justify-content: center;
@@ -211,5 +204,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 150px;
 }

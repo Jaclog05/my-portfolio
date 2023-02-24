@@ -1,8 +1,6 @@
 import styles from'./App.module.css';
 
 import img from './profile_picture-nbg.png'
-/* import novelty from './Novelty-books.png'
-import food from './Henry-food.png' */
 
 function App() {
   return (
@@ -37,7 +35,10 @@ function App() {
             <div className={styles.skillsGrid}>
                 <div>
                   <h3>HTML & CSS</h3>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html-logo" />
+                  <div className={styles.htmlcss}>
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html-logo" />
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css-logo" />
+                  </div>
                 </div>
                 <div>
                   <h3>Javascript</h3>
@@ -65,21 +66,18 @@ function App() {
         <h2>My Projects</h2>
             <div className={styles.skillsWork}>
                 <div>
-                  <h3>Henry Foods</h3>
-                  {/* <img src={food} alt="henry-food"/> */}
+        
                 </div>
                 <div>
-                  <h3>Novelty Books</h3>
-                 {/*  <img src={novelty} alt="novelty-books"/> */}
+            
                 </div>
             </div>
         </div>
         <div className={styles.contact}>
             <h2>Contact me!</h2>
             <div className={styles.skillsContact}>
-                <i className="bi bi-linkedin"></i>
-                <i className="bi bi-github"></i>
-                <i className="bi bi-envelope"></i>
+                <a href="https://www.linkedin.com/in/jaider-cueto-logreira"><i className="bi bi-linkedin"></i></a>
+                <a href="https://github.com/Jaclog05"><i className="bi bi-github"></i></a>
             </div>
 
         </div>
