@@ -65,12 +65,26 @@ function App() {
         <div className={styles.myWork}>
         <h2>My Projects</h2>
             <div className={styles.skillsWork}>
-                <div>
-        
-                </div>
-                <div>
-            
-                </div>
+                <a href='https://pi-foods-front-ten.vercel.app/'>
+                  <div>
+                    <div className={styles.workDetail}>
+                        <h3>Henry Food</h3>
+                        <p>Henry Food is an application where we can view 
+                          different food recipes along with relevant information
+                          about them. We are allowed to search for recipes,
+                          filter them, sort them and create our own recipes.</p>
+                    </div>   
+                  </div>
+                </a>
+                <a href='https://novelty-books.vercel.app/login'>
+                  <div>
+                    <div className={styles.workDetail}>
+                        <h3>Novelty Books</h3>
+                        <p>Novelty books is a web application for purchasing,
+                          creating and modifying physical books of various genres.</p>
+                    </div>   
+                  </div>
+                </a>
             </div>
         </div>
         <div className={styles.contact}>

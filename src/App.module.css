@@ -1,6 +1,11 @@
+.App {
+  position: absolute;
+  z-index: -3;
+}
 /* Navigation Bar */
 
 .nav {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -18,6 +23,9 @@
 
 .main {
   height: fit-content;
+  position: absolute;
+  z-index: -2;
+  background-color: #020027; 
 }
 
 .introduction {
@@ -126,8 +134,7 @@
   display: grid;
   grid-template-rows: 1fr 9fr;
   height: 500px;
-  background-color: #020027;
-  color: #b0a5e9
+  color: #b0a5e9;
 }
 
 
@@ -138,29 +145,52 @@
   grid-template-rows: 1fr 1fr;
 }
 
-.skillsWork > div {
+.skillsWork > a > div {
   height:200px;
   width: 400px;
   border: 1px solid #b0a5e9;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size:cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
-.skillsWork > div:hover {
+.skillsWork > a > div:hover {
   cursor: pointer;
-  color: #020027;
 }
 
-.skillsWork > div:first-child {
+.skillsWork > a:first-child > div {
   background-image: url('./Henry-food.png');
 }
 
-.skillsWork > div:last-child {
+.skillsWork > a:last-child > div {
   background-image: url('./Novelty-books.png');
+}
+
+.workDetail{
+  position: absolute;
+  left: 0px;
+  background-color: rgba(0, 0, 255, 0.25);
+  border-radius: 0px 10px 10px 0px;
+  height: 200px;
+  width: 400px;
+  transition: left 0.4s ease-in-out;
+  z-index: -1;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  color: white
+}
+
+.workDetail > * {
+  text-align: center;
+  margin: auto 0px;
+}
+
+.skillsWork > a > div:hover > div{
+    left: 400px;
 }
 
 .contact {
@@ -200,9 +230,12 @@
 }
 
 .footer {
+  position: relative;
+  width: 100vw;
   background-color: gray;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
+  top: 1915px;
 }
