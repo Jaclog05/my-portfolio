@@ -72,7 +72,11 @@ function App() {
         <div id='my_projects' className={styles.myWork}>
             <hr className={styles.hr3}/>
             <div className={styles.skillsWork}  id='content'>
-                <a href='https://pi-foods-front-ten.vercel.app/'>
+                <a 
+                  href='https://pi-foods-front-ten.vercel.app/'
+                  target="_blank" 
+                  rel="noreferrer"
+                >
                   <div>
                     <img src={food} height='180' width='400' alt="foodProject"/>
                     <div className={styles.workDetail}>
@@ -85,7 +89,11 @@ function App() {
                     <h2><i class="bi bi-hand-index-thumb-fill"></i>  Hover Me</h2>
                   </div>
                 </a>
-                <a href='https://novelty-books.vercel.app/login'>
+                <a 
+                  href='https://novelty-books.vercel.app/login'
+                  target="_blank" 
+                  rel="noreferrer"
+                >
                   <div>
                     <img src={novelty} height='180' width='400' alt="noveltyProject"/>
                     <div className={styles.workDetail}>
@@ -107,8 +115,20 @@ function App() {
               <div><i className="bi bi-geo-alt-fill"></i>Soledad, Colombia</div>
             </div>
             <div className={styles.skillsContact}>
-                <a href="https://www.linkedin.com/in/jaider-cueto-logreira"><i className="bi bi-linkedin"></i></a>
-                <a href="https://github.com/Jaclog05"><i className="bi bi-github"></i></a>
+                <a 
+                  href="https://www.linkedin.com/in/jaider-cueto-logreira"
+                  target="_blank" 
+                  rel="noreferrer" 
+                >
+                  <i className="bi bi-linkedin"></i>
+                </a>
+                <a 
+                  href="https://github.com/Jaclog05"
+                  target="_blank" 
+                  rel="noreferrer" 
+                >
+                  <i className="bi bi-github"></i>
+                </a>
             </div>
 
         </div>
