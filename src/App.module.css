@@ -49,8 +49,45 @@
   height: fit-content;
   position: absolute;
   z-index: -2;
-  background-color: #020027; 
+  background-color: #020027;
 }
+
+.hr1, .hr2, .hr3, .hr4 {
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: 4px solid palevioletred;
+  text-align: center;
+  margin: 0;
+}
+
+.hr1::after, .hr2::after, .hr3::after, .hr4::after {
+  display: inline-block;
+  position: relative;
+  top: -0.9em;
+  font-size: 1.8em;
+  padding: 0 0.5em;
+  background-color: #020027;
+  color: palevioletred;
+  font-weight: 900;
+}
+
+.hr1::after {
+  content: "About me";
+}
+
+.hr2::after {
+  content: "My skills";
+}
+
+.hr3::after {
+  content: "My Last Projects";
+}
+
+.hr4::after {
+  content: "Get in touch";
+}
+
 
 .introduction {
   background: url('./banner-portfolio.jpg') center/cover no-repeat;
@@ -69,7 +106,7 @@
 
 .typewriter > img {
   width: 200px;
-  border: 2px solid white;
+  border: 4px solid plum;
   border-radius: 50%;
 }
 
@@ -105,15 +142,11 @@
 
 
 .about {
-  padding: 60px 60px 0px 60px;
+  padding: 80px 60px 0px 60px;
   display: grid;
   grid-template-rows: 1fr 9fr;
   height: fit-content;
   color: #b0a5e9
-}
-
-.about > h2, .skills > h2, .myWork > h2 {
-  margin: 0px auto;
 }
 
 .about > div {
@@ -130,27 +163,12 @@
   font-weight: 700;
 }
 
-.about > div > button {
-  background-color: plum;
-  color: #020027;
-  font-weight: 900;
-  border-radius: 10px;
-  border: none;
-}
-
-.about > div > button:hover{
-  background-color: blue;
-  color: white;
-  border: 2px solid white;
-}
-
 
 .skills {
-  padding: 60px 60px 0px 60px;
+  padding: 80px 60px 0px 60px;
   display: grid;
   grid-template-rows: 1fr 9fr;
   height: fit-content;
-  background-color: #020027;
   color: #b0a5e9;
   width: 100%;
 }
@@ -165,7 +183,7 @@
 }
 
 .skillsGrid > div {
-  border: 1px solid #b0a5e9;
+  border: 1px solid plum;
   border-radius: 10px;
   text-align: center;
   padding: 1em;
@@ -186,7 +204,7 @@
 }
 
 .myWork {
-  padding-top: 60px;
+  padding: 80px 60px 0px 60px;
   display: grid;
   grid-template-rows: 1fr 9fr;
   height: 480px;
@@ -203,36 +221,45 @@
   margin: 0px auto;
 }
 
+
 .skillsWork > a > div {
-  height:180px;
+  height: 362px;
   width: 400px;
-  border: 1px solid #b0a5e9;
-  border-radius: 10px 10px 0 0;
+  border: 2px solid plum;
+  border-radius: 0 0 10px 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-size:cover;
   background-repeat: no-repeat;
   position: relative;
   margin: 10px auto;
 }
 
-.skillsWork > a > div:hover {
+
+.skillsWork > a > div {
   cursor: pointer;
 }
 
-.skillsWork > a:first-child > div {
-  background-image: url('./Henry-food.png');
+
+.skillsWork > a > div > h2 {
+  position: absolute;
+  top: 250px;
+  z-index: -2;
 }
 
-.skillsWork > a:last-child > div {
-  background-image: url('./Novelty-books.png');
+.skillsWork > a > div {
+  filter: grayscale(100%);
+}
+
+.skillsWork > a > div:hover {
+  filter: grayscale(0%);
 }
 
 .workDetail{
   position: absolute;
   top: 0px;
-  background-color: rgba(0, 0, 255, 0.25);
+  background-color: rgb(221, 160, 221, 0.75);
   border-radius: 0px 0px 10px 10px;
   height: 180px;
   width: 400px;
@@ -240,13 +267,14 @@
   z-index: -1;
   display: grid;
   grid-template-rows: 1fr 4fr;
-  color: white;
+  color: #020027;
   padding: 5px 10px
 }
 
 .workDetail > * {
   text-align: center;
   margin: auto 0px;
+  font-weight: 600;
 }
 
 .skillsWork > a > div:hover > div{
@@ -254,17 +282,14 @@
 }
 
 .contact {
-  padding: 60px 60px 0px 60px;
+  padding: 80px 60px 20px 60px;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  height: 200px;
+  grid-template-rows: 1fr 4fr;
+  height: fit-content;
   background-color: #020027;
   color: #b0a5e9
 }
 
-.contact > h2 {
-  margin: 0px auto;
-}
 
 .skillsContact {
   padding: 0 500px;
@@ -280,8 +305,7 @@
   display: flex;
   padding: 5px 15px;
   justify-content: center;
-  background-color: #b0a5e9;
-  border: 1px solid black;
+  background-color: #020027;
   border-radius: 10px;
   color: white;
   font-size: 20px;
@@ -289,13 +313,27 @@
   margin: auto 0px;
 }
 
-.footer {
-  position: relative;
-  width: 100vw;
-  background-color: gray;
+.contactFirst{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  top: 2238px;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 160px;
+  margin: 10px auto;
+}
+
+.contactFirst > div {
+  padding: 5px 10px;
+  width: 280px;
+  margin: 0px 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: plum;
+  color: #020027;
+  font-weight: 900;
+}
+
+.contactFirst > div > i {
+  margin-right: 10px;
 }

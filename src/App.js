@@ -1,6 +1,10 @@
 import styles from'./App.module.css';
+import ResumeButton from './components/ResumeButton.jsx';
+
 
 import img from './Jaider_Cueto_Profile_picture.jpeg'
+import food from './Henry-food.png'
+import novelty from './Novelty-books.png'
 
 function App() {
   return (
@@ -20,8 +24,9 @@ function App() {
             </div>
         </div>
         <div id='about' className={styles.about}>
-            <h2>About me</h2>
-            <div>
+            {/* <h2>About me</h2> */}
+            <hr className={styles.hr1}/>
+            <div id='content'>
               <p>Hi, I'm Jaider. From the beginning I was interested 
                 in how computers work, so I decided to learn their 
                 language. I love to create attractive, fluid and 
@@ -29,12 +34,12 @@ function App() {
                 for personal taste. Here I share with you a little bit 
                 of what I like to do. Thanks for being here!
               </p>
-              <button>Download CV</button>
+              <ResumeButton/>
             </div>
         </div>
         <div id='my_skills' className={styles.skills}>
-            <h2>My Skills</h2>
-            <div className={styles.skillsGrid}>
+                <hr className={styles.hr2}/>
+            <div className={styles.skillsGrid} id='content'>
                 <div>
                   <h5>HTML & CSS</h5>
                   <div className={styles.htmlcss}>
@@ -65,32 +70,42 @@ function App() {
             </div>
         </div>
         <div id='my_projects' className={styles.myWork}>
-        <h2>My Projects</h2>
-            <div className={styles.skillsWork}>
+            <hr className={styles.hr3}/>
+            <div className={styles.skillsWork}  id='content'>
                 <a href='https://pi-foods-front-ten.vercel.app/'>
                   <div>
+                    <img src={food} height='180' width='400' alt="foodProject"/>
                     <div className={styles.workDetail}>
                         <h3>Henry Food</h3>
                         <p>Henry Food is an application where we can view 
                           different food recipes along with relevant information
                           about them. We are allowed to search for recipes,
                           filter them, sort them and create our own recipes.</p>
-                    </div>   
+                    </div>
+                    <h2><i class="bi bi-hand-index-thumb-fill"></i>  Hover Me</h2>
                   </div>
                 </a>
                 <a href='https://novelty-books.vercel.app/login'>
                   <div>
+                    <img src={novelty} height='180' width='400' alt="noveltyProject"/>
                     <div className={styles.workDetail}>
                         <h3>Novelty Books</h3>
                         <p>Novelty books is a web application for purchasing,
                           creating and modifying physical books of various genres.</p>
                     </div>   
+                    <h2><i class="bi bi-hand-index-thumb-fill"></i>  Hover Me</h2>
                   </div>
                 </a>
             </div>
         </div>
         <div id='contact_me' className={styles.contact}>
-            <h2>Contact me!</h2>
+            {/* <h2>Contact me!</h2> */}
+            <hr className={styles.hr4}/>
+            <div className={styles.contactFirst}>
+              <div><i className="bi bi-envelope-at-fill"></i>jaidercueto.1010@gmail.com</div>
+              <div><i className="bi bi-telephone-fill"></i>+57 317-461-2402</div>
+              <div><i className="bi bi-geo-alt-fill"></i>Soledad, Colombia</div>
+            </div>
             <div className={styles.skillsContact}>
                 <a href="https://www.linkedin.com/in/jaider-cueto-logreira"><i className="bi bi-linkedin"></i></a>
                 <a href="https://github.com/Jaclog05"><i className="bi bi-github"></i></a>
@@ -98,11 +113,6 @@ function App() {
 
         </div>
       </main>
-      <footer className={styles.footer}>
-            <p className="m-0 text-center text-white">
-              Copyright &copy; Jaclog05 - 2023
-            </p>
-      </footer>
     </div>
   );
 }

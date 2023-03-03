@@ -1,0 +1,14 @@
+.buttonStyle {
+    background-color: plum;
+    color: #020027;
+    font-weight: 900;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.buttonStyle:hover{
+    transform: scale(1.05);
+    color: #020027;
+}
