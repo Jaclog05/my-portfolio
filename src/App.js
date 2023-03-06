@@ -77,8 +77,8 @@ function App() {
                   target="_blank" 
                   rel="noreferrer"
                 >
-                  <div>
-                    <img src={food} height='180' width='400' alt="foodProject"/>
+                  <div className={styles.workContainer}>
+                    <img src={food} alt="foodProject"/>
                     <div className={styles.workDetail}>
                         <h3>Henry Food</h3>
                         <p>Henry Food is an application where we can view 
@@ -94,8 +94,8 @@ function App() {
                   target="_blank" 
                   rel="noreferrer"
                 >
-                  <div>
-                    <img src={novelty} height='180' width='400' alt="noveltyProject"/>
+                  <div className={styles.workContainer}>
+                    <img src={novelty} alt="noveltyProject"/>
                     <div className={styles.workDetail}>
                         <h3>Novelty Books</h3>
                         <p>Novelty books is a web application for purchasing,

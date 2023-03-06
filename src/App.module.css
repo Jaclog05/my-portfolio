@@ -2,7 +2,8 @@
   box-sizing: border-box;
   position: absolute;
   z-index: -3;
-  width: 98vw;
+  width: 100%;
+  height: max-content;
 }
 
 .App > *{
@@ -16,8 +17,9 @@
   display: flex;
   justify-content: center;
   background-color: #020027;
-  height: 60px;
+  height: 10%;
   width: 100vw;
+  margin: -2px;
 }
 
 .nav > a {
@@ -34,6 +36,8 @@
   font-weight: 800;
   padding: 0px 5px;
   height: 100%;
+  font-size: 100%;
+  text-align: center;
 }
 
 .nav > a > span:hover {
@@ -150,11 +154,28 @@
 }
 
 .about > div {
-  padding: 0px 350px;
+  padding: 0% 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 750px){
+  .about > div {
+    padding: 0% 10%;
+  }
+  .contactFirst{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: fit-content;
+  }
+
+  .contactFirst > div {
+    width: 90%;
+  }
 }
 
 .about > div > p {
@@ -175,11 +196,10 @@
 
 
 .skillsGrid {
-  padding: 20px 300px;
-  display: grid;
-  gap: 15px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  padding: 2% 25%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .skillsGrid > div {
@@ -187,6 +207,9 @@
   border-radius: 10px;
   text-align: center;
   padding: 1em;
+  width: 200px;
+  margin: 15px auto;
+  min-width: 50px;
 }
 
 .skillsGrid > div > img {
@@ -207,53 +230,46 @@
   padding: 80px 60px 0px 60px;
   display: grid;
   grid-template-rows: 1fr 9fr;
-  height: 480px;
-  color: #b0a5e9;
+}
+
+.skillsWork {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skillsWork > a {
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+  padding: 0;
+  margin: 0px 10px;
+  width: 30%;
+}
+
+.workContainer {
+  height: 80%;
+  margin: 0px;
+  border: 2px solid plum;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.workContainer > img {
   width: 100%;
 }
 
-
-.skillsWork {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: 1fr 1fr;
-  width: fit-content;
-  margin: 0px auto;
-}
-
-
-.skillsWork > a > div {
-  height: 362px;
-  width: 400px;
-  border: 2px solid plum;
-  border-radius: 0 0 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-size:cover;
-  background-repeat: no-repeat;
-  position: relative;
-  margin: 10px auto;
-}
-
-
-.skillsWork > a > div {
-  cursor: pointer;
-}
-
-
-.skillsWork > a > div > h2 {
+.workContainer > h2 {
   position: absolute;
-  top: 250px;
-  z-index: -2;
-}
-
-.skillsWork > a > div {
-  filter: grayscale(100%);
-}
-
-.skillsWork > a > div:hover {
-  filter: grayscale(0%);
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  top: 70%;
+  z-index: -3;
 }
 
 .workDetail{
@@ -261,40 +277,44 @@
   top: 0px;
   background-color: rgb(221, 160, 221, 0.75);
   border-radius: 0px 0px 10px 10px;
-  height: 180px;
-  width: 400px;
+  max-height: 50%;
+  width: 100%;
   transition: top 0.4s ease-in-out;
   z-index: -1;
   display: grid;
   grid-template-rows: 1fr 4fr;
   color: #020027;
-  padding: 5px 10px
-}
-
-.workDetail > * {
+  padding: 5px 10px;
+  overflow: hidden;
   text-align: center;
-  margin: auto 0px;
-  font-weight: 600;
 }
 
-.skillsWork > a > div:hover > div{
-    top: 180px;
+.workContainer:hover > div{
+  top: 50%;
 }
+
 
 .contact {
   padding: 80px 60px 20px 60px;
   display: grid;
   grid-template-rows: 1fr 4fr;
-  height: fit-content;
-  background-color: #020027;
-  color: #b0a5e9
+  height: 400px;
+  color: #b0a5e9;
+  width: 100%;
 }
 
 
 .skillsContact {
-  padding: 0 500px;
+  padding: 0 50%;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 400){
+  .skillsContact{
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .skillsContact > a {
@@ -318,20 +338,27 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 800px;
+  width: 80%;
   height: 160px;
   margin: 10px auto;
 }
 
+
 .contactFirst > div {
   padding: 5px 10px;
-  width: 280px;
+  width: 90%;
   margin: 0px 10px;
   text-align: center;
   border-radius: 5px;
   background-color: plum;
   color: #020027;
   font-weight: 900;
+}
+
+@media (max-width: 500px){
+  .contactFirst > div{
+    font-size: 10px;
+  }
 }
 
 .contactFirst > div > i {
