@@ -209,7 +209,7 @@
   padding: 1em;
   width: 200px;
   margin: 15px auto;
-  min-width: 50px;
+  min-width: 120px;
 }
 
 .skillsGrid > div > img {
@@ -230,6 +230,7 @@
   padding: 80px 60px 0px 60px;
   display: grid;
   grid-template-rows: 1fr 9fr;
+  height: fit-content;
 }
 
 .skillsWork {
@@ -237,20 +238,32 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+@media (max-width: 920px){
+  .skillsWork {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
 }
 
 .skillsWork > a {
   text-decoration: none;
   color: inherit;
-  width: fit-content;
   padding: 0;
   margin: 0px 10px;
   width: 30%;
+  min-width: 250px;
+  height: fit-content;
 }
 
 .workContainer {
-  height: 80%;
+  height: 100%;
+  min-width: 15em;
   margin: 0px;
   border: 2px solid plum;
   border-radius: 0 0 10px 10px;
@@ -270,27 +283,107 @@
   width: 100%;
   top: 70%;
   z-index: -3;
+  font-size: 20px;
 }
+
+
 
 .workDetail{
   position: absolute;
   top: 0px;
-  background-color: rgb(221, 160, 221, 0.75);
+  background-color: rgb(221, 160, 221);
   border-radius: 0px 0px 10px 10px;
-  max-height: 50%;
+  height: 50%;
   width: 100%;
   transition: top 0.4s ease-in-out;
   z-index: -1;
-  display: grid;
-  grid-template-rows: 1fr 4fr;
-  color: #020027;
-  padding: 5px 10px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 5px;
   text-align: center;
+  overflow: hidden;
 }
 
 .workContainer:hover > div{
   top: 50%;
+}
+
+
+@media (max-width: 400px){
+  .workContainer > h2 {
+    font-size: 14px;
+  }
+
+  .workDetail > h3 {
+    font-size: 4vw;
+  }
+  .workDetail > p {
+    font-size: 2.7vw;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 450px){
+  .workContainer > h2 {
+    font-size: 24px;
+  }
+
+  .workDetail > h3 {
+    font-size: 3.7vw;
+  }
+  .workDetail > p {
+    font-size: 2.2vw;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 600px){
+  .workContainer > h2 {
+    font-size: 24px;
+  }
+
+  .workDetail > h3 {
+    font-size: 3.1vw;
+  }
+  .workDetail > p {
+    font-size: 1.8vw;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px){
+  .workContainer > h2 {
+    font-size: 27px;
+  }
+  .workDetail > h3 {
+    font-size: 2.2vw;
+  }
+  .workDetail > p {
+    font-size: 1.2vw;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1000px){
+  .workContainer > h2 {
+    font-size: 27px;
+  }
+  .workDetail > h3 {
+    font-size: 2.2vw;
+  }
+  .workDetail > p {
+    font-size: 1.1vw;
+  }
+}
+
+@media (min-width: 1000px){
+  .workContainer > h2 {
+    font-size: 30px;
+  }
+  .workDetail > h3 {
+    font-size: 2vw;
+  }
+  .workDetail > p {
+    font-size: 1.1vw;
+  }
 }
 
 
