@@ -196,20 +196,28 @@
 
 
 .skillsGrid {
-  padding: 2% 25%;
+  padding: 2% 5%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
 }
 
 .skillsGrid > div {
-  border: 1px solid plum;
+  border: 2px solid plum;
   border-radius: 10px;
   text-align: center;
-  padding: 1em;
   width: 200px;
   margin: 15px auto;
   min-width: 120px;
+}
+
+.skillsGrid > div > div:first-child{
+  background-color: plum;
+  color: #020027;
+  border-radius: 8px 8px 0 0;
+  padding: 0.3em
 }
 
 .skillsGrid > div > img {
@@ -253,7 +261,7 @@
 
 .skillsWork > a {
   text-decoration: none;
-  color: inherit;
+  color: #020027;
   padding: 0;
   margin: 0px 10px;
   width: 30%;
@@ -270,6 +278,7 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr 1fr;
+  color: #020027;
 }
 
 .workContainer > img {
@@ -284,6 +293,7 @@
   top: 70%;
   z-index: -3;
   font-size: 20px;
+  color: plum;
 }
 
 
@@ -440,6 +450,7 @@
 .contactFirst > div {
   padding: 5px 10px;
   width: 90%;
+  max-width: 400px;
   margin: 0px 10px;
   text-align: center;
   border-radius: 5px;
@@ -450,7 +461,7 @@
 
 @media (max-width: 500px){
   .contactFirst > div{
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
