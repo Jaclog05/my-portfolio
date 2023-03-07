@@ -120,14 +120,14 @@ function App() {
                   target="_blank" 
                   rel="noreferrer" 
                 >
-                  <i className="bi bi-linkedin"></i>
+                  <div><i className="bi bi-linkedin"></i> Jaider Cueto Logreira</div>
                 </a>
                 <a 
                   href="https://github.com/Jaclog05"
                   target="_blank" 
                   rel="noreferrer" 
                 >
-                  <i className="bi bi-github"></i>
+                  <div><i className="bi bi-github"></i> Jaclog05</div>
                 </a>
             </div>
 
