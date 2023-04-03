@@ -1,11 +1,10 @@
 import styles from'./App.module.css';
-import ResumeButton from './components/ResumeButton.jsx';
-
-
 import img from './Jaider_Cueto_Profile_picture.jpeg'
-import food from './Henry-food.png'
-import novelty from './Novelty-books.png'
-import portfolio from './portfolio.png'
+import projectsInfo from './projectsInfo.js'
+import skillsInfo from './skillsInfo.js';
+import ProjectContainer from './components/ProjectContainer';
+import ResumeButton from './components/ResumeButton.jsx';
+import SkillContainer from './components/SkillContainer';
 
 function App() {
   return (
@@ -41,7 +40,7 @@ function App() {
         <div id='my_skills' className={styles.skills}>
                 <hr className={styles.hr2}/>
             <div className={styles.skillsGrid} id='content'>
-                <div>
+                {/* <div>
                   <div><h5>HTML & CSS</h5></div>
                   <div className={styles.htmlcss}>
                       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html-logo" />
@@ -67,63 +66,39 @@ function App() {
                 <div>
                   <div><h5>Sequelize</h5></div>                  
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" alt="sql-logo"/>
-                </div>
+                </div> */}
+                {
+                  skillsInfo.map(skill => {
+                    return (
+                      <SkillContainer
+                          skill={skill.title}
+                          imagesArray={skill.images}
+                          altArray={skill.alt}
+                      />
+                    )
+                  })
+                }
             </div>
         </div>
         <div id='my_projects' className={styles.myWork}>
             <hr className={styles.hr3}/>
             <div className={styles.skillsWork}  id='content'>
-                <a 
-                  href='https://pi-foods-front-ten.vercel.app/'
-                  target="_blank" 
-                  rel="noreferrer"
-                >
-                  <div className={styles.workContainer}>
-                    <img src={food} alt="foodProject"/>
-                    <div className={styles.workDetail}>
-                        <h3>Henry Food</h3>
-                        <p>Henry Food is an application where we can view 
-                          different food recipes along with relevant information
-                          about them. We are allowed to search for recipes,
-                          filter them, sort them and create our own recipes.</p>
-                    </div>
-                    <h2><i class="bi bi-hand-index-thumb-fill"></i>  Hover Me</h2>
-                  </div>
-                </a>
-                <a 
-                  href='https://novelty-books.vercel.app/login'
-                  target="_blank" 
-                  rel="noreferrer"
-                >
-                  <div className={styles.workContainer}>
-                    <img src={novelty} alt="noveltyProject"/>
-                    <div className={styles.workDetail}>
-                        <h3>Novelty Books</h3>
-                        <p>Novelty books is a web application for purchasing,
-                          creating and modifying physical books of various genres.</p>
-                    </div>   
-                    <h2><i class="bi bi-hand-index-thumb-fill"></i>  Hover Me</h2>
-                  </div>
-                </a>
-                <a 
-                  href='https://my-portfolio-jaclog05.vercel.app/'
-                  target="_blank" 
-                  rel="noreferrer"
-                >
-                  <div className={styles.workContainer}>
-                    <img src={portfolio} alt="noveltyProject"/>
-                    <div className={styles.workDetail}>
-                        <h3>Personal portfolio</h3>
-                        <p>The site where you are right now!. My personal portfolio 
-                          created with react, using CSS modules and it's responsive!</p>
-                    </div>   
-                    <h2><i class="bi bi-hand-index-thumb-fill"></i>  Hover Me</h2>
-                  </div>
-                </a>
+                {
+                  projectsInfo.map(project => {
+                      return(
+                          <ProjectContainer
+                              projectLink={project.projectLink}
+                              image={project.imageSrc}
+                              alt={project.alt}
+                              title={project.title}
+                              description={project.description}
+                          />
+                      )
+                  })
+                }
             </div>
         </div>
         <div id='contact_me' className={styles.contact}>
-            {/* <h2>Contact me!</h2> */}
             <hr className={styles.hr4}/>
             <div className={styles.contactFirst}>
               <div><i className="bi bi-envelope-at-fill"></i>jaidercueto.1010@gmail.com</div>
