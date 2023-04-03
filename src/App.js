@@ -24,7 +24,6 @@ function App() {
             </div>
         </div>
         <div id='about' className={styles.about}>
-            {/* <h2>About me</h2> */}
             <hr className={styles.hr1}/>
             <div id='content'>
               <p>Hi, I'm Jaider. From the beginning I was interested 
@@ -40,33 +39,6 @@ function App() {
         <div id='my_skills' className={styles.skills}>
                 <hr className={styles.hr2}/>
             <div className={styles.skillsGrid} id='content'>
-                {/* <div>
-                  <div><h5>HTML & CSS</h5></div>
-                  <div className={styles.htmlcss}>
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html-logo" />
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css-logo" />
-                  </div>
-                </div>
-                <div>
-                  <div><h5>Javascript</h5></div>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="js-logo"/>
-                </div>
-                <div>
-                  <div><h5>React</h5></div>              
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react-logo"/>
-                </div>
-                <div>
-                  <div><h5>Redux</h5></div>              
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="redux-logo"/>
-                </div>
-                <div>
-                  <div><h5>Node</h5></div>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="node-logo"/>
-                </div>
-                <div>
-                  <div><h5>Sequelize</h5></div>                  
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" alt="sql-logo"/>
-                </div> */}
                 {
                   skillsInfo.map(skill => {
                     return (
