@@ -253,7 +253,7 @@
 @media (max-width: 920px){
   .skillsWork {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
     justify-items: center;
   }

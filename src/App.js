@@ -5,6 +5,7 @@ import ResumeButton from './components/ResumeButton.jsx';
 import img from './Jaider_Cueto_Profile_picture.jpeg'
 import food from './Henry-food.png'
 import novelty from './Novelty-books.png'
+import portfolio from './portfolio.png'
 
 function App() {
   return (
@@ -100,6 +101,21 @@ function App() {
                         <h3>Novelty Books</h3>
                         <p>Novelty books is a web application for purchasing,
                           creating and modifying physical books of various genres.</p>
+                    </div>   
+                    <h2><i class="bi bi-hand-index-thumb-fill"></i>  Hover Me</h2>
+                  </div>
+                </a>
+                <a 
+                  href='https://my-portfolio-jaclog05.vercel.app/'
+                  target="_blank" 
+                  rel="noreferrer"
+                >
+                  <div className={styles.workContainer}>
+                    <img src={portfolio} alt="noveltyProject"/>
+                    <div className={styles.workDetail}>
+                        <h3>Personal portfolio</h3>
+                        <p>The site where you are right now!. My personal portfolio 
+                          created with react, using CSS modules and it's responsive!</p>
                     </div>   
                     <h2><i class="bi bi-hand-index-thumb-fill"></i>  Hover Me</h2>
                   </div>
