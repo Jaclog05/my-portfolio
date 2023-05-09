@@ -1,6 +1,7 @@
 import food from './Henry-food.png'
 import novelty from './Novelty-books.png'
-import portfolio from './portfolio.png' 
+import portfolio from './portfolio.png'
+import ageCalculator from './age-calculator-image.png'
 
 const projectsInfo = [
     {
@@ -23,6 +24,13 @@ const projectsInfo = [
         title: "Personal portfolio",
         alt: "portfolioProject",
         description: "The site where you are right now!. My personal portfolio created with react, using CSS modules and it's responsive!"
+    },
+    {
+        projectLink: "https://age-calculator-ruddy.vercel.app/",
+        imageSrc: ageCalculator,
+        title: "Age Calculator",
+        alt: "AgeCalculatorProject",
+        description: "With this simple app you can know your exact age entering your birthday! It was made entirely with HTML, CSS and Javascript."
     }
 ]
 
