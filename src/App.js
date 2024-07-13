@@ -1,5 +1,5 @@
 import styles from'./App.module.css';
-import img from './Jaider_Cueto_Profile_picture.jpeg'
+import img from './Jaider_Cueto_Portfolio_Picture.jpeg'
 import projectsInfo from './projectsInfo.js'
 import skillsInfo from './skillsInfo.js';
 import ProjectContainer from './components/ProjectContainer';
@@ -26,12 +26,13 @@ function App() {
         <div id='about' className={styles.about}>
             <hr className={styles.hr1}/>
             <div id='content'>
-              <p>Hi, I'm Jaider. From the beginning I was interested 
-                in how computers work, so I decided to learn their 
-                language. I love to create attractive, fluid and 
-                efficient websites to offer solutions to problems and 
-                for personal taste. Here I share with you a little bit 
-                of what I like to do. Thanks for being here!
+              <p>
+                I am Jaider, a fullstack developer with a comprehensive approach to software development.
+                With over 2 years of experience in web development, I have worked with a variety of technologies,
+                including React, Redux, Node.js, and PostgreSQL. I have developed end-to-end solutions that span
+                from user interfaces to server logic and database management. I firmly believe in the importance
+                of collaboration and effective communication within development teams. My goal is to continue
+                growing professionally and contribute to projects that make a difference.
               </p>
               <ResumeButton/>
             </div>

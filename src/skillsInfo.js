@@ -46,6 +46,15 @@ const skillsInfo = [
             "node-logo"
         ]
     },
+    {          
+        title: "Ruby on Rails",
+        images: [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain-wordmark.svg"
+        ],
+        alt: [
+            "ruby-on-rails-logo"
+        ]
+    },
     {
         title: "PostgreSQL",
         images: [
@@ -63,7 +72,25 @@ const skillsInfo = [
         alt: [
             "sql-logo"
         ]
-    }
+    },
+    {
+        title: "Git",
+        images: [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+        ],
+        alt: [
+            "git-logo"
+        ]
+    },
+    {
+        title: "Github",
+        images: [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+        ],
+        alt: [
+            "github-logo"
+        ]
+    },
 ]
 
 export default skillsInfo
